@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>21120004-HTML5</title>
+<link rel="icon" href="html5.png">
+<style>
+    header {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    h1:not(:first-child) {
+      margin-left: 10px;
+    }
+
+    a {
+        margin-left: 20px;
+        text-decoration: none;
+        color: black;
+    }
+
+
+    table {
+        border: 1px solid black;
+    }
+
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+<header>
+    <a href="#header"><img src="html5.png" alt="HTML5" width="100" height="100"></a>
+    <a href="#header"><h1 id="header">HTML5</h1> </a>
+
+    <a href="#FavImg"><h1>Link 1</h1></a>
+    <a href="#Tbl"><h1>Link 2</h1></a>
+    <a href="#Tbl"><h1>Link 3</h1></a>
+</header>
+
+<ol>
+    <li>Nested List Item 1
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </li>
+    <li>Nested List Item 2
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+    </li>
+</ol>
+
+<h1 id = "FavImg">My Favorite Image</h1>
+<img src="https://photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg" alt="my favorite image">
+
+<h1 id = "Tbl">A test table with <i>megered cells</i></h1>
+<table>
+    <tr>
+        <th rowspan="2"></th>
+        <th colspan="2">Average</th>
+        <th rowspan="2">Red eyes</th>
+    </tr>
+    <tr>
+        <th>height</th>
+        <th>weight</th>
+    </tr>
+    <tr>
+        <th>Males</th>
+        <td>1.9</th>
+        <td>0.003</th>
+        <td>40%</th>
+    </tr>
+    <tr> 
+        <th>Females</th>
+        <td>1.7</th>
+        <td>0.002</th>
+        <td>43%</th>
+    </tr>
+</table>
+
+</body>
+</html>
