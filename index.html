@@ -4,18 +4,54 @@
 <title>21120004-HTML5</title>
 <link rel="icon" href="html5.png">
 <style>
+    /* Container for the entire page content */
+    .container {
+        display: flex;
+        margin: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    /* Sidebar styles */
+    .sidebar {
+        flex: 1;
+        margin-right: 20px;
+    }
+
+    /* Main content styles */
+    .main-content {
+        flex: 3;
+    }
+
+    /* Styles for the nested lists */
+    .sidebar ul {
+        list-style-type: none; /* This removes all bullets */
+        padding-left: 20px; /* Adds indentation to the list */
+    }
+
+    /* Add bullets to second-level lists */
+    .sidebar li ul {
+        list-style-type: circle; /* This adds the bullet back in */
+    }
+
+    /* Add numbers to top-level lists */
+    .sidebar > ul > li {
+        list-style-type: decimal; /* This will add numbers to the top-level list */
+    }
+
+    .sidebar li {
+        margin-bottom: 10px;
+    }
+    
     header {
         display: flex;
         align-items: center;
         padding: 10px;
     }
-
+    
     h1 {
         margin: 0;
-    }
-
-    h1:not(:first-child) {
-      margin-left: 10px;
+        font-size: 25px;
     }
 
     a {
@@ -47,58 +83,66 @@
 </head>
 <body>
 <header>
-    <a href="#header"><img src="html5.png" alt="HTML5" width="100" height="100"></a>
-    <a href="#header"><h1 id="header">HTML5</h1> </a>
-
-    <a href="#FavImg"><h1>Link 1</h1></a>
-    <a href="#Tbl"><h1>Link 2</h1></a>
-    <a href="#Tbl"><h1>Link 3</h1></a>
+        <a href="#header"><img src="html5.png" alt="HTML5" width="80" height="80"></a>
+        <a href="#header"><h1 id="header" style="color: blue; margin-left: 5px;">HTML5</h1> </a>
+    
+        <a href="#nestedList" style="color: blue; margin-left: auto;"><h1>Link 1</h1></a>
+        <a href="#favImg" style="color: blue; margin-left: 20px;"><h1>Link 2</h1></a>
+        <a href="#table" style="color: blue; margin-left: 20px;"><h1>Link 3</h1></a>
 </header>
 
 <div class="horizontal-line"></div>
 
-<ol>
-    <li>Nested List Item 1
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ul>
-    </li>
-    <li>Nested List Item 2
-        <ul>
-            <li>Item 1</li>
-            <li>Item 2</li>
-        </ul>
-    </li>
-</ol>
+<div class="container">
+    <aside class="sidebar" id="nestedList">
+        <ol>
+            <li>Nested List Item 1
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+            </li>
+            <li>Nested List Item 2
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+            </li>
+        </ol>
+    </aside>
 
-<h1 id = "FavImg">My Favorite Image</h1>
-<img src="https://photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg" alt="my favorite image">
+    <div class="main-content">
+        <h1 id = "favImg" style="margin-bottom: 15px;">My Favorite Image</h1>
+    <img src="https://photographylife.com/wp-content/uploads/2014/09/Nikon-D750-Image-Samples-2.jpg" 
+    alt="my favorite image" style="max-width: 100%; height: auto;">
 
-<h1 id = "Tbl">A test table with <i>megered cells</i></h1>
-<table>
-    <tr>
-        <th rowspan="2"></th>
-        <th colspan="2">Average</th>
-        <th rowspan="2">Red eyes</th>
-    </tr>
-    <tr>
-        <th>height</th>
-        <th>weight</th>
-    </tr>
-    <tr>
-        <th>Males</th>
-        <td>1.9</th>
-        <td>0.003</th>
-        <td>40%</th>
-    </tr>
-    <tr> 
-        <th>Females</th>
-        <td>1.7</th>
-        <td>0.002</th>
-        <td>43%</th>
-    </tr>
-</table>
+    <h1 id = "table" style="margin-bottom: 15px;">A test table with <i>megered cells</i></h1>
+    <table>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2">Average</th>
+            <th rowspan="2">Red eyes</th>
+        </tr>
+        <tr>
+            <th>height</th>
+            <th>weight</th>
+        </tr>
+        <tr>
+            <th>Males</th>
+            <td>1.9</th>
+            <td>0.003</th>
+            <td>40%</th>
+        </tr>
+        <tr> 
+            <th>Females</th>
+            <td>1.7</th>
+            <td>0.002</th>
+            <td>43%</th>
+        </tr>
+    </table>
+
+    </div>
+</div>
 
 <div class="horizontal-line"></div>
 
